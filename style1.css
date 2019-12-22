@@ -1,0 +1,31 @@
+
+        #ge{
+            text-align: center;
+            font-size: 100px;
+            background-color: antiquewhite;      
+        }
+        #getit{
+            text-align: center;
+            font-weight: bold;
+            color: #f1f548;
+            font-size: 50px;
+        }
+        #input{
+            text-align: center;
+        }
+        #plan{
+            background-color: teal;
+        }
+        #type1{
+            width: 300px;
+            height: 50px;
+        }
+        #ppp{
+            text-align: center;
+            font-size: 35px;
+            color: brown;
+            font-weight: bold;
+        }
+        #event{
+            text-align: center;
+        }

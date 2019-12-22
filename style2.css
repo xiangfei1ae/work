@@ -1,0 +1,16 @@
+
+        #head{
+            text-align: center;
+            font-size: 100px;
+            font-weight: 600;
+        }
+        #ider{
+            text-align: center;
+            margin: 200px;
+            background-color:burlywood;
+        }
+        #mail,#pass1,#pass2{
+            height: 50px;
+            width: 200px;
+            margin: 30px;
+        }
