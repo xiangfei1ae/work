@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ge{
+            text-align: center;
+            font-size: 100px;      
+        }
+        #hehe{
+            text-align: right;
+            height: 200px;
+            width: 200px;
+        }
+        #getit{
+            text-align: center;
+            font-weight: bold;
+            color: #f1f548;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p id="ge" onmouseout="ga()" onmouseover="ha()">今天鸽还是不鸽呢？</p>
+    <div id="plan">
+        <p id="getit">是不是该干点什么</p>
+    </div>
+    <img  id="hehe" src="gege.jpeg">
+
+    <script>
+        function ha()
+        {
+            document.getElementById("ge").innerHTML = "说鸽就鸽也是一种不鸽";
+        }
+        function ga()
+        {
+            document.getElementById("ge").innerHTML = "今天鸽还是不鸽呢"
+        }
+    </script>
+</body>
+</html>
