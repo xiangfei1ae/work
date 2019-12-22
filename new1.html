@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ge{
+            text-align: center;
+            font-size: 100px;
+            background-color: antiquewhite;      
+        }
+        #getit{
+            text-align: center;
+            font-weight: bold;
+            color: #f1f548;
+            font-size: 50px;
+        }
+        #input{
+            text-align: center;
+        }
+        #plan{
+            background-color: teal;
+        }
+        #type1{
+            width: 300px;
+            height: 50px;
+        }
+        #ppp{
+            text-align: center;
+            font-size: 35px;
+            color: brown;
+            font-weight: bold;
+        }
+        #event{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="ge" onmouseout="ga()" onmouseover="ha()">今天鸽还是不鸽呢？</p>
+    <div id="plan">
+        <p id="getit">是不是该干点什么</p>
+        <div id="input">
+            <input id="type1" type="text" placeholder="输入待办事项">
+            <button onclick="add()">增加</button> <button onclick="dele()">删除</button>
+        </div>
+        <p id="ppp">待办事项：</p>
+        <div id="event">
+
+        </div>
+    </div>
+    
+    
+
+    <script>
+        function ha()
+        {
+            document.getElementById("ge").innerHTML = "说鸽就鸽也是一种不鸽";
+        }
+        function ga()
+        {
+            document.getElementById("ge").innerHTML = "今天鸽还是不鸽呢"
+        }
+        function add()
+        {
+            var a=document.getElementById("type1").value;
+            var parent=document.getElementById("event");
+            var bn=document.createElement("div");
+            var newnode1=document.createElement("input");
+            newnode1.type="checkbox";
+            var newnode2=document.createElement("input");
+            newnode2.type="text";
+            newnode2.value=a;
+            bn.appendChild(newnode1);
+            bn.appendChild(newnode2);
+            newnode1.name="ui";
+            parent.appendChild(bn);
+            document.getElementById("type1").value="";
+        }
+        function dele()
+        {
+            var parent=document.getElementById("event");
+            var arr=document.getElementsByName("ui");    
+            for(let i=0;i<arr.length;i++)
+            {
+                if(arr[i].checked)
+                parent.removeChild(parent.childNodes[i]);
+            }
+        }
+    </script>
+</body>
+</html>
